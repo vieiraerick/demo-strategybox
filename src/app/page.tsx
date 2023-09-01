@@ -3,7 +3,6 @@
 import Card from "@/components/Card";
 import Chart from "@/components/Chart";
 import DetailsCard from "@/components/DetailsCard";
-import Header from "@/components/Header";
 import SellsAmountCard from "@/components/SellsAmountCard";
 import SellsTable from "@/components/SellsTable";
 
@@ -19,7 +18,6 @@ import {
 export default function Home() {
   return (
     <div className="h-full">
-      <Header />
       <main className="p-12 flex flex-col gap-12">
         <div className="grid grid-flow-dense grid-cols-1 laptop:grid-cols-2 desktop:grid-cols-4 gap-4">
           <Card

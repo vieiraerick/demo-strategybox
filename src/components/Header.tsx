@@ -20,7 +20,11 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const width = useWindowSize();
 
-  const menuItems = ["Menu 1", "Menu 2", "Menu 3"];
+  const menuItems = [
+    { nome: "Dashboard", href: "/" },
+    { nome: "Extrato", href: "/extrato" },
+    { nome: "Menu", href: "#" },
+  ];
 
   return (
     <Navbar
@@ -42,9 +46,9 @@ export default function Header() {
       {width > 640 ? (
         <NavbarContent>
           {menuItems.map((item, index) => (
-            <NavbarItem key={`${item}-${index}`}>
-              <Link className="w-full" color="foreground" href="#">
-                {item}
+            <NavbarItem key={`${item.nome}-${index}`}>
+              <Link className="w-full" color="foreground" href={item.href}>
+                {item.nome}
               </Link>
             </NavbarItem>
           ))}
@@ -52,9 +56,14 @@ export default function Header() {
       ) : (
         <NavbarMenu>
           {menuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link className="w-full" color="foreground" href="#" size="lg">
-                {item}
+            <NavbarMenuItem key={`${item.nome}-${index}`}>
+              <Link
+                className="w-full"
+                color="foreground"
+                href={item.href}
+                size="lg"
+              >
+                {item.nome}
               </Link>
             </NavbarMenuItem>
           ))}
