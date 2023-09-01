@@ -93,8 +93,10 @@ export default function SellsTable() {
     <Table
       aria-label="Example table with dynamic content"
       isStriped
+      removeWrapper
       classNames={{
         base: "max-h-[300px]",
+        table: "text-default-900",
       }}
     >
       <TableHeader columns={columns}>

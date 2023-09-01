@@ -11,7 +11,7 @@ export default function SellsAmountCard() {
 
   return (
     <Card
-      className="border-none p-4 bg-background/60 dark:bg-default-100/50"
+      className="border-none p-4 bg-background dark:bg-default-100/50"
       isBlurred
       shadow="sm"
     >

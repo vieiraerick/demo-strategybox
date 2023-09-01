@@ -43,30 +43,24 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 laptop:grid-cols-2 gap-4">
           <div className="mobile:hidden laptop:block">
-            <Accordion
-              defaultExpandedKeys={["1"]}
-              variant="shadow"
-              className="bg-background/60 dark:bg-default-100/50"
-            >
+            <Accordion defaultExpandedKeys={["1"]}>
               <AccordionItem
                 key="1"
                 aria-label="Gráfico de vendas"
                 title="Gráfico de vendas"
+                className="bg-white rounded-2xl px-4"
               >
                 <Chart />
               </AccordionItem>
             </Accordion>
           </div>
           <div>
-            <Accordion
-              defaultExpandedKeys={["1"]}
-              variant="shadow"
-              className="bg-background/60 dark:bg-default-100/50"
-            >
+            <Accordion defaultExpandedKeys={["1"]}>
               <AccordionItem
                 key="1"
                 aria-label="Últimas vendas"
                 title="Últimas vendas"
+                className="bg-white rounded-2xl px-4"
               >
                 <SellsTable />
               </AccordionItem>

@@ -13,7 +13,7 @@ interface CardComponentProps {
 export default function CardComponent(props: CardComponentProps) {
   return (
     <Card
-      className="border-none max-w-[640px] bg-background/60 dark:bg-default-100/50"
+      className="border-none max-w-[640px] bg-gray-800/60 text-white"
       isBlurred
       shadow="sm"
     >
@@ -22,7 +22,7 @@ export default function CardComponent(props: CardComponentProps) {
         <Divider orientation="vertical" />
         <div className="flex flex-col">
           <p className="text-md">{props.valor}</p>
-          <p className="text-small text-default-500">{props.etiqueta}</p>
+          <p className="text-small text-default-300">{props.etiqueta}</p>
         </div>
       </CardBody>
     </Card>

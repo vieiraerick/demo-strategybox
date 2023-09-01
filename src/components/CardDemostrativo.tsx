@@ -5,7 +5,7 @@ import { Divider } from "@nextui-org/divider";
 
 export default function CardDemostrativo() {
   return (
-    <Card className="max-w-full laptop:min-w-[500px] desktop:min-w-[780px] bg-background/60 dark:bg-default-100/50 flex flex-1">
+    <Card className="max-w-full laptop:min-w-[500px] desktop:min-w-[780px] bg-background dark:bg-default-100/50 flex flex-1">
       <CardHeader className="justify-between">
         <div className="flex flex-col gap-1 items-start justify-center w-full">
           <h2 className="text-small font-bold leading-none text-default-600">
@@ -24,7 +24,9 @@ export default function CardDemostrativo() {
       <Divider />
       <CardBody className="px-3 pt-0 pb-4 text-xl">
         <div className="text-sm w-full">
-          <h3 className="border-l-4 rounded-sm pl-2 my-2">Setembro</h3>
+          <h3 className="border-l-4 border-purple-600 rounded-sm pl-2 my-2">
+            Setembro
+          </h3>
           {comprasSet.map((x) => {
             return (
               <div
@@ -39,7 +41,9 @@ export default function CardDemostrativo() {
               </div>
             );
           })}
-          <h3 className="border-l-4 rounded-sm pl-2 mt-6 mb-2">Agosto</h3>
+          <h3 className="border-l-4 border-purple-600 rounded-sm pl-2 mt-6 mb-2">
+            Agosto
+          </h3>
           {comprasAgo.map((x) => {
             return (
               <div

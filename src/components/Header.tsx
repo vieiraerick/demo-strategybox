@@ -31,7 +31,7 @@ export default function Header() {
       isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="flex items-center justify-start"
+      className="flex items-center justify-start bg-gray-800/60"
     >
       {width <= 640 && (
         <NavbarMenuToggle
@@ -40,25 +40,29 @@ export default function Header() {
       )}
 
       <NavbarBrand className="max-w-max">
-        <Image width={150} alt="Logotipo" src={Logo} color="#7159c1" />
+        <Image width={150} alt="Logotipo" src={Logo} />
       </NavbarBrand>
 
       {width > 640 ? (
         <NavbarContent>
           {menuItems.map((item, index) => (
             <NavbarItem key={`${item.nome}-${index}`}>
-              <Link className="w-full" color="foreground" href={item.href}>
+              <Link
+                className="w-full text-white"
+                color="foreground"
+                href={item.href}
+              >
                 {item.nome}
               </Link>
             </NavbarItem>
           ))}
         </NavbarContent>
       ) : (
-        <NavbarMenu>
+        <NavbarMenu className="bg-gray-900/90 pt-2">
           {menuItems.map((item, index) => (
             <NavbarMenuItem key={`${item.nome}-${index}`}>
               <Link
-                className="w-full"
+                className="text-2xl text-white my-2"
                 color="foreground"
                 href={item.href}
                 size="lg"

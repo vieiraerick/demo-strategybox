@@ -7,7 +7,7 @@ export default function DetailsCard() {
   const [isBloqued, setIsBloqued] = React.useState(false);
 
   return (
-    <Card className="max-w-full bg-background/60 dark:bg-default-100/50 flex flex-1">
+    <Card className="max-w-full bg-background dark:bg-default-100/50 flex flex-1">
       <CardHeader className="justify-between">
         <div className="flex flex-col gap-1 items-start justify-center">
           <h2 className="text-small font-semibold leading-none text-default-600">
